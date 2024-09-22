@@ -1,0 +1,16 @@
+1. npm i netlify-lambda
+2. npm i serverless-http
+3. create .gitignore file
+4. type node_modules , functions inside .gitignore file
+5. create netlify.toml file
+6. type [build]  function = "functions"
+7. create new folder "dist"
+8. inside dist folder create index.html
+9. inside app.js const serverless = require('serverless-http');
+10. const router = express.Router();
+app.use('/.netlify/functions/app');
+module.exports.handler = serverless(app, router);
+
+11. package.json -> scripts -> start -> "./nodule_modules/.bin/netlify-lambda serve src"
+
+12.  package.json -> scripts -> build -> './node_mudules/.bin/netlify-lambda build src"
